@@ -22,6 +22,7 @@ public class ReceiptController {
         this.receiptService = receiptService;
     }
 
+    //Get API endpoint to get receipt data based on a given date
     @GetMapping("/receipt/{date}")
     public List<Receipt> getReceipt(@PathVariable @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate date){
         return receiptService.getReceipts(date);
