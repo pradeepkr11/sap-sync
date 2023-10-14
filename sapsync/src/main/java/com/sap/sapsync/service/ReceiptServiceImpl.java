@@ -2,6 +2,7 @@ package com.sap.sapsync.service;
 
 import com.sap.sapsync.entity.Receipt;
 import com.sap.sapsync.repository.ReceiptRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -12,6 +13,7 @@ public class ReceiptServiceImpl implements ReceiptService {
 
     private final ReceiptRepository receiptRepository;
 
+    @Autowired
     public ReceiptServiceImpl(ReceiptRepository receiptRepository){
         this.receiptRepository = receiptRepository;
     }
