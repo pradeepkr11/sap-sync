@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface ReceiptService {
     List<Receipt> getReceipts(LocalDate date);
-    
+
 }
